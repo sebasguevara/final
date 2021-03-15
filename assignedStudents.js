@@ -96,7 +96,7 @@ function printBlank() {
     <div class = "sm:flex text-gray-500 border-2 border-green-500 mt-4 px-4 mx-4 pt-10 pb-6 rounded">
       <div class="w-full text-center text-3xl">  
         <div> There are currently <strong>no students</strong> assigned to you </div>
-        <div class="text-lg mt-2"> Go to the <strong href="newStudents.html"> unassigned students </strong> section to select students! </div>
+        <div class="text-lg mt-2"> Go to the <a href="newStudents.html" class ="hover:underline"><strong > unassigned students</strong></a> section to select students! </div>
        
       </div>
   
