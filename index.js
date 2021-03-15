@@ -10,15 +10,15 @@ firebase.auth().onAuthStateChanged(async function(user) {
     })
     
     document.querySelector('.sign-in-or-sign-out').innerHTML = `
-    <div class="sm:flex items-center mx-4 my-1 bg-white">
-    <div class="sm:w-1/2 text-left flex items-center">
+    <div class="flex items-center mx-4 my-1 bg-white">
+    <div class="w-1/2 text-left flex items-center">
       <div class="mx-2 home"><img src="assets/Vinco_Logo1.webp" alt="Vinco" width="40" height="40"/></div>
       <div class="text-left text-gray-400 text-4xl">Vinco</div>
     </div>
 
-    <div class="text-left sm:w-1/2 sm:text-right">
+    <div class="w-1/2 text-right">
     <div class="w-full text-gray-600">Signed in as <strong>${user.displayName}</strong>
-    <button class="w-full text-gray-600 underline sign-out text-left sm:text-right">Sign Out</button>
+    <button class="w-full text-gray-600 underline sign-out text-right ">Sign Out</button>
     </div>
   </div>`
 
