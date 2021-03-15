@@ -1,12 +1,5 @@
 let db = firebase.firestore()
 
-document.querySelector('.sign-in-or-sign-out').innerHTML = `
-<div class="mx-2 home"><img src="assets/Vinco_Logo1.webp" alt="Vinco" width="40" height="40"/></div>
-<div class="text-left text-gray-400 text-4xl">Vinco</div>
-<div class="container mx-auto h-full flex justify-center items-center">
-<div class="w-1/3">
-    <h1 class="font-bold mb-6 text-center text-green-500">Sign up or Login to Vinco!</h1>
-</div>`
 
 firebase.auth().onAuthStateChanged(async function(user) {
   if (user) {
@@ -147,10 +140,22 @@ firebase.auth().onAuthStateChanged(async function(user) {
   } else {
     // Signed out
     console.log('signed out')
-    document.querySelector('.welcome').classList.add('hidden')
+    // document.querySelector('.welcome').classList.add('hidden')
     document.querySelector('.student-coach').classList.add('hidden')
     // Initializes FirebaseUI Auth
     let ui = new firebaseui.auth.AuthUI(firebase.auth())
+
+    document.querySelector('.sign-in-or-sign-out').innerHTML = `
+    <div class="sm:flex items-center mx-4 my-1 bg-white">
+    <div class="w-1/2 text-left flex items-center">
+      <div class="mx-2 home"><img src="assets/Vinco_Logo1.webp" alt="Vinco" width="40" height="40"/></div>
+      <div class="text-left text-gray-400 text-4xl">Vinco</div>
+    </div>`
+
+    document.querySelector('.welcome').innerHTML =`
+    <div class="w-full">
+    <h1 class="mb-3 text-center text-green-500">Sign up or Login to Vinco!</h1>
+    </div>`
 
     // FirebaseUI configuration
     let authUIConfig = {
@@ -161,7 +166,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
     }
 
     // Starts FirebaseUI Auth
-    ui.start('.sign-in-or-sign-out', authUIConfig)
+    ui.start('.welcome', authUIConfig)
   }
 
 })
