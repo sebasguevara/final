@@ -16,9 +16,9 @@ firebase.auth().onAuthStateChanged(async function(user) {
       <div class="text-left text-gray-400 text-4xl">Vinco</div>
     </div>
 
-    <div class="sm:w-1/2 text-right">
+    <div class="text-left sm:w-1/2 sm:text-right">
     <div class="w-full text-gray-600">Signed in as <strong>${user.displayName}</strong>
-    <button class="w-full text-gray-600 underline sign-out text-right">Sign Out</button>
+    <button class="w-full text-gray-600 underline sign-out text-left sm:text-right">Sign Out</button>
     </div>
   </div>`
 
