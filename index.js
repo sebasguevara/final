@@ -113,7 +113,8 @@ firebase.auth().onAuthStateChanged(async function(user) {
       // When the user is new
     } else {
       document.querySelector('.student-coach').innerHTML =  `
-        <div class="p-3 sm:flex">
+      <div class="w-full text-center text-gray-400 text-2xl"> Are you a <strong class="text-green-500">coach</strong> or a <strong class="text-green-500">student</strong>? </div>  
+      <div class="p-3 sm:flex">
           <a href="#" class="sm:w-1/2 coach-button block text-center text-white text-xl bg-green-500 hover:bg-green-700 mt-4 px-4 mx-4 py-2 rounded">Coach</a>
           <a href="#" class="sm:w-1/2 student-button block text-center text-white text-xl bg-green-500 hover:bg-green-700 mt-4 px-4 mx-4 py-2 rounded">Student</a>
           </div>
